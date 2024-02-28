@@ -23,6 +23,9 @@ app.use(express.json());
 app.use("/api/v1/users",  userRouter);
 app.use("/api/v1/task",  taskRouter);
 
+app.get("/", (req, res) => {
+  res.send("Nice Working");
+});
 app.use(errormiddleware);
 
 module.exports = app;
